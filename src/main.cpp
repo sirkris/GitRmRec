@@ -5,7 +5,15 @@ using namespace std;
 
 int main()
 {
-	FILE *f = _popen( "ls", "r" );
+	FILE *f;
+	
+#ifdef __linux__
+	f = popen( "ls", "r" );
+#elif defined _WIN32 || defined __WIN64
+	f = _popen( "dir", "r" );
+#else
+#error "Unknown platform!"
+#endif
 
 	if ( f == 0 )
 	{
