@@ -1,6 +1,7 @@
 src/VC10/GitRmRec/Debug
 src/VC10/ipch
 src/VC10/*.suo
+src/VC10/Debug/*.suo
 src/VC10/GitRmRec/*.user
 src/VC10/*.sdf
 src/VC10/*.opensdf
