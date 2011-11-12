@@ -9,6 +9,8 @@ int main()
 	
 #ifdef __linux__
 	f = popen( "ls", "r" );
+#elif defined __APPLE__
+	f = popen( "ls", "r" );
 #elif defined _WIN32 || defined __WIN64
 	f = _popen( "dir", "r" );
 #else
