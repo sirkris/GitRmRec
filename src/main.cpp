@@ -50,7 +50,7 @@ int main()
 			s = s.erase( s.find_last_not_of( " \t\r\n" ) + 1 );
 
 			/* Build the Git command.  --Kris */
-			s = "git rm --cached " + s;
+			s = "git rm --cached \"" + s + "\"";
 
 			/* Make usable by popen.  --Kris */
 			gitc = s.c_str();
